@@ -149,6 +149,12 @@ label{
     transform: scaleX(-1);
 }
 
+.errorRegisterForm{
+    font-size: 3vh;
+    color: #66FCF1;
+    margin-left: 10vw;
+}
+
 /*     -------------------------------     first page       ----------------------------         */
 
 .buton1{
