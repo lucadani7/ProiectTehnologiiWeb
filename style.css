@@ -6,19 +6,31 @@ body {
 }
 
 header {
-    text-align: center;
     position: relative;
     color: #45A29E;
-    background: #0B0B10;
+    background: #1B0B10;
     height: 15vh;
     min-width: 500px;
     width: 100%;
     font-size: 4vh;
 }
 
-header h1{
+ul {
+    list-style-type: none;
     margin: 0;
-    padding-top: 2vh;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu-list li{
+    float: left;
+}
+
+.menu-list li a {
+    display: block;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
 }
 
 main {
