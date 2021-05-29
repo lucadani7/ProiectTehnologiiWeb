@@ -8,11 +8,12 @@ body {
 header {
     position: relative;
     color: #45A29E;
-    background: #1B0B10;
+    background: #000000;
     height: 15vh;
     min-width: 500px;
     width: 100%;
     font-size: 4vh;
+    top: 0;
 }
 
 ul {
@@ -22,15 +23,49 @@ ul {
     overflow: hidden;
 }
 
-.menu-list li{
+li{
     float: left;
 }
 
-.menu-list li a {
+li a {
     display: block;
     text-align: center;
-    padding: 20px 30px;
+    margin-top: 5.5vh;
+    margin-left: 5vh;
     text-decoration: none;
+    border-left: 1vh solid #000000;
+    border-right: 1vh solid #45A29E;
+}
+
+li:last-child{
+    float: right;
+}
+
+.logo-img{
+    width: 15vh;
+    height: 15vh;
+}
+
+li a:link {
+    text-decoration: none;
+    color: #45A29E;
+}
+  
+li a:visited {
+    text-decoration: none;
+    color: #45A29E;
+}
+  
+li a:hover {
+    text-decoration: none;
+    border-left-color: #45A29E;
+    border-right-color: #000000;
+    color: #1F2833;
+}
+  
+li a:active {
+    text-decoration: none;
+    color: #45A29E;
 }
 
 main {
