@@ -2,48 +2,70 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-color: #1F2833;
 }
 
-header {
-    position: relative;
+/*       ----------------------------  footer    ---------------------------------     */
+
+footer{
     color: #45A29E;
     background: #000000;
     height: 15vh;
-    min-width: 500px;
+    width: 100%;
+    bottom: 0;
+    margin: 0;
+    position: relative;
+    text-align: center;
+}
+
+footer p{
+    font-size: 10vh;
+    margin: 0;
+}
+
+/*       ----------------------------  header    ---------------------------------     */
+
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    color: #45A29E;
+    background: #000000;
+    height: 15vh;
     width: 100%;
     font-size: 4vh;
     top: 0;
 }
 
-ul {
+/*       ------------------------  meniu index page   -----------------------------     */
+
+.meniu{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    color: #45A29E;
+    background: #000000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 15vh;
+    font-size: 5vh;
+
 }
 
-li{
+.meniu li{
     float: left;
 }
 
-li a {
+.meniu li a {
     display: block;
     text-align: center;
-    margin-top: 5.5vh;
+    padding-left: 15px;
+    padding-right: 15px;
     margin-left: 5vh;
+    margin-top: 5vh;
     text-decoration: none;
-    border-left: 1vh solid #000000;
-    border-right: 1vh solid #45A29E;
-}
-
-li:last-child{
-    float: right;
-}
-
-.logo-img{
-    width: 15vh;
-    height: 15vh;
+    border-right: 2vh solid #000000;
+    border-left: 2vh solid #45A29E;
 }
 
 li a:link {
@@ -58,100 +80,82 @@ li a:visited {
   
 li a:hover {
     text-decoration: none;
-    border-left-color: #45A29E;
-    border-right-color: #000000;
+    border-right-color: #45A29E;
+    border-left-color: #000000;
     color: #1F2833;
 }
   
 li a:active {
     text-decoration: none;
-    color: #45A29E;
+    color: #1F2833;
 }
+
+/*       ----------------------------  main    ---------------------------------     */
 
 main {
-    position: relative;
+    margin-top: 15vh;
 }
 
-/*       ----------------------------  index      ---------------------------------     */
+/*       --------------------------  index page     -------------------------------     */
 
 .div-img{
-    position: relative;
-    width: 25%;
-    height: 40vh;
-    min-height: 300px;
-    min-width: 200px;
-    display: block;
-    float: left;
-}
-
-.div-img img {
-    opacity: 1;
-    transition: 1s ease;
-    backface-visibility: hidden;
+    color: #66FCF1;
+    font-size: 15vh;
+    height: 85vh;
     width: 100%;
-    height: 100%;
-    min-height: 0px;
-    min-width: 0px;
+    background-image: url("poza1.jpg");
+    text-align: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-top: 5vh;
 }
 
-.mid {
-    transition: 1s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+.div-text{
+    background-image: linear-gradient(gray, #45A29E);
+    width: 100%;
+    height: 70vh;
+    margin: 0;
+    border-top: 1vh solid black;
+    padding-top: 5vh;
+}
+
+.div-text p {
+    margin: 0;
+    font-size: 5vh;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.div-text h1{
+    font-size: 8vh;
     text-align: center;
 }
 
-.div-img:hover img {
-    opacity: 0.3;
+.div-text a{
+    font-size: 5vh;
+    margin-left: 100px;
+    padding: 16px 20px;
+    background-image: linear-gradient(to right, #66FCF1, #1F2833);
+    border-radius: 12px;
+    color: black;
 }
 
-.div-img:hover .mid {
-    opacity: 1;
-}
-
-.div-txt{
-    background-color: #45A29E;
-    color: #1F2833;
-    font-size: 16px;
-    padding: 16px 16px;
-    border-radius: 50%;
-}
-
-a:link {
+.div-text a:link {
     text-decoration: none;
 }
   
-a:visited {
+.div-text a:visited {
     text-decoration: none;
 }
   
-a:hover {
+.div-text a:hover {
     text-decoration: none;
+    background-image: linear-gradient(to left, #66FCF1, #1F2833);
+    transition: 1;
 }
   
-a:active {
+.div-text a:active {
     text-decoration: none;
-}
-
-.link-main, .link-main:link, .link-main:visited, .link-main:active{
-    display: inline-block;
-    color: #1F2833;
-    font-size: 3vh;
-    padding: 30px 50px;
-    border: 5px solid #45A29E;
-    background-color: #66FCF1;
-    margin-left: 20vw;
-    margin-top: 10px;
-}
-
-.link-main:hover{
-    border: 5px solid #45A29E;
-    background-color: #1F2833;
-    color: #66FCF1
 }
 
 /*     --------------------------------      login/register    -----------------------------------       */
