@@ -9,23 +9,30 @@
 </head>
 <body>
     <header>
-        <h1>Workout Generator</h1>
+        <p>Workout Generator</p>
     </header>
 
-    <br><br>
-
-    <main>
-        <form action="login.php" method="GET" autocomplete="off">
+    <div class="main-login">
+        <form action="login.php" method="POST" autocomplete="off">
             <label for="email">Email</label><br>
-            <input type="text" id="email" name="email"><br>
+            <input type="text" id="email" name="email" required><br>
             <label for="password">Password</label><br>
-            <input type="password" id="password" name="password"><br>
-            <button type="submit" class="link-main" href="first-page.html">Submit</button>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit" class="submit"><span>Login</span></button>
         </form>
-    </main>
+    </div>
 
-    <?php 
-        $error = "Cont sau parola incorecte";
+    <?php //trebuie verificat daca exista in baza de date
+        $emailBun = "123@gmail.com";
+        $parola = "123";
+        if(isset($_POST['password']) && isset($_POST['email'])){
+            if($emailBun == $_POST['email'] && $parola == $_POST['password']){
+                header('Location: first-page.html');
+            }
+            else{
+                echo '<script>window.alert("Email sau parola incorecte")</script>';
+            }
+        }
     ?>
 
 </body>

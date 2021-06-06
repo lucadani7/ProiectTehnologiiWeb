@@ -1,5 +1,5 @@
 <?php
-$server='localhost';
+$server='localhost'; // trebuie pus in register.php
 $user='root';
 $pass='';
 $db='fitness_db';
