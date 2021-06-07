@@ -1,0 +1,37 @@
+[
+    {
+        "nume": "Abdomene cu picioarele ridicate",
+        "durata": "10 min/serie",
+        "repetari": "10-20, 2-3 serii",
+        "calorii": "150",
+        "descriere": "Pozitia de start al acestui exercitiu va fi cu trunchiul in pozitia orizontal, intins pe spate iar picioarele indoite si incrucisate, unul peste celalalt, ridicate la un nivel mai sus decat bazinului. Picioarele in timpul exercitiului pot fi sprijinite pe o banca, pozitie recomandata pentru incepatori sau mentinerea acestora ridicate pe tot parcursul miscarii. Pozitia bratelor va fi cu palmele la ceafa, incrucisate la piept, sau in lateral, in functie de preferintele executantului. Miscarea se va face prin ridicarea trunchiului pana la apropierea capului de genunchi, impreuna cu un expir puternic, iar pentru o solicitare mai mare a muschiului abdominal, este recomandat mentinerea in acea pozitie un anumit timp. Coborarea trunchiului se va face impreuna cu un inspir, avand o miscare normala, pana in pozitia de start. O alternativa de executare al acestui exercitiu este prin ridicarea si rasucirea trunchiului alternativ, pana la atingerea sau apropierea cotului de piciorul opus.",
+        "imagine": "http://www.divahair.ro/images/speciale/articole/articole_imagini/alexag_135/22.05.2014/486671397.jpg"
+    },
+
+    {
+        "nume": "Plank",
+        "durata": "30-60 sec/repetare",
+        "repetari": "3",
+        "calorii": "5",
+        "descriere": " Stai într-o poziție de flotare cu coatele pe podea la un unghi de 90 de grade. Încordează abdomenul și menține poziția timp de 30-60 de secunde.",
+        "imagine": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hdm119918mh15842-1545237096.png?crop=1.00xw:0.752xh;0,0.248xh&resize=1200:*"
+    },
+
+    {
+        "nume": "Ridicari de picioare",
+        "durata": "10 min/serie",
+        "repetari": "15-20, 3 serii",
+        "calorii": "100",
+        "descriere": "Stai pe spate cu mâinile pe lângă corp și picioarele întinse. Încordează-ți abdomenul și ridică picioarele spre corp. Atunci când picioarele sunt perpendiculare cu podeaua, ridică-ți spatele ușor folosindu-te de abdomen. Apoi lasă ușor spatele pe podea și revin-o cu picioarele în poziția inițială.",
+        "imagine": "https://coolfamilistclub.ro/wp-content/uploads/2020/04/Logomarked-Hip-Lift-Low-Back-Off-Floor_Waist_medium.jpg"
+    },
+
+    {
+        "nume": "Mountain Climber",
+        "durata": "20-60 sec",
+        "repetari": "1-3",
+        "calorii": "5",
+        "descriere": "Puneți ambele mâini și genunchi pe podea. Așezați piciorul drept lângă mâna dreaptă și extindeți piciorul stâng în spatele vostru. Cu o singură mișcare lină, schimbați picioarele, menținând brațele în aceeași poziție. Schimbați picioarele înainte și înapoi de două ori, astfel încât piciorul drept să fie din nou aproape de mâna dreaptă.",
+        "imagine": "https://rejuvage.com/wp-content/uploads/2019/07/iStock-957699448.jpg"
+    }
+]

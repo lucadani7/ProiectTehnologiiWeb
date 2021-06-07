@@ -8,6 +8,30 @@
     <title>Workout Generator</title>
 </head>
 <body>
-    
+
+    <header>
+        <p>Workout Generator</p>
+    </header>
+
+    <div class="generate-main">
+
+        <?php
+            if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+                $fileName = $_POST['grMuschi'] . ".json";
+                $json = file_get_contents($fileName);
+                $json_data = json_decode($json, true);
+                foreach($json_data as $element){
+                    echo'<p class="nume">' . $element['nume'] . '</p>';
+                    echo'<p class="descriere">' . 'Repetari: ' . $element['repetari'] . '</p>';
+                    echo'<p class="descriere">' . $element['descriere'] . '</p>';
+                    echo'<img class="imagine-generata" src="' . $element['imagine'] . '" alt="Imagine...">';
+                }
+            }
+
+        ?>
+
+    </div>
+
 </body>
 </html>

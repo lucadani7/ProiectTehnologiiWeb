@@ -1,0 +1,37 @@
+[
+    {
+        "nume": "Flexii cu baza Z",
+        "durata": "10 min",
+        "repetari": "10-12, 2-3 serii",
+        "calorii": "90",
+        "descriere": "Mulți găsesc bara Z mult mai confortabilă  decât bara dreaptă, acest lucru se datorează în mare parte poziției palmei. Flexiile cu bara Z sunt un exercițiu care lucrează foarte bine ambele capete ale bicepsului.",
+        "imagine": "https://cdn-bclgf.nitrocdn.com/wpAoYJAbTooERMUDzBAgCOxMPjEHbqgd/assets/static/optimized/rev-aaa2ca3/wp-content/uploads/2016/01/your-top-10-biceps-moves-reskin-3.jpg"
+    },
+
+    {
+        "nume": "Flexii înclinate cu gantera",
+        "durata": "15 min",
+        "repetari": "10 pentru fiecare brat, 3 serii",
+        "calorii": "80",
+        "descriere": "Acest exercițiu se execută pe o bancă înclinată la un un unghi de 45 de grade, care întinde mai mult capul lung al tricepsului, astfel obținându-se o activare mai bună. Poți face flexiile alternate, dar cele mai eficiente sunt cele concomitente.",
+        "imagine": "https://cdn-bclgf.nitrocdn.com/wpAoYJAbTooERMUDzBAgCOxMPjEHbqgd/assets/static/optimized/rev-aaa2ca3/wp-content/uploads/2016/04/7-must-do-hacks-for-classic-arm-exercises-3.jpg"
+    },
+
+    {
+        "nume": "Flexii hammer",
+        "durata": "10 min",
+        "repetari": "10/serie, 3 serii",
+        "calorii": "90",
+        "descriere": "Un exercițiu ce solicită partea exterioară a bicepsului. Totul ține de formă, deci cotul trebuie să stea nemișcat pe parcursul mișcării.",
+        "imagine": "https://cdn-bclgf.nitrocdn.com/wpAoYJAbTooERMUDzBAgCOxMPjEHbqgd/assets/static/optimized/rev-aaa2ca3/wp-content/uploads/2016/01/flexii-hammer.jpg"
+    },
+
+    {
+        "nume": "Flexii de concentrare/Arnold",
+        "durata": "8 min",
+        "repetari": "",
+        "calorii": "70",
+        "descriere": "Un exercițiu în care ne folosim de o ganteră și de ceva concentrare, ca să simplific lucrurile.De ce concentrare? Pentru că trebuie să ne îndreptăm atenția spre mișcare negativă (coborâre). Scade greutatea pentru că acesta este un exercițiu de izolare pentru biceps",
+        "imagine": "https://cdn-bclgf.nitrocdn.com/wpAoYJAbTooERMUDzBAgCOxMPjEHbqgd/assets/static/optimized/rev-aaa2ca3/wp-content/uploads/2016/01/flexii-arnold.jpg"
+    }
+]

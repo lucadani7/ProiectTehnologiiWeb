@@ -274,3 +274,36 @@ label{
     height: 75vh;
     padding-top: 10vh;
 }
+
+/*     -------------------------------     generate page       ----------------------------         */
+
+.generate-main{
+    padding-top: 10vh;
+    margin-top: 15vh;
+    height: auto;
+    width: 100%;
+    background-color: #1F2833;
+}
+
+.nume{
+    font-size: 5vh;
+    color: #66FCF1;
+    margin-left: 10vw;
+}
+
+.descriere{
+    font-size: 3vh;
+    color: #45A29E;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.descriere:last-child{
+    margin-bottom: 0;
+}
+
+.imagine-generata{
+    height: 200px;
+    width: 200px;
+    margin-left: 15vw;
+}

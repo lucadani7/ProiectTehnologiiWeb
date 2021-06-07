@@ -15,21 +15,25 @@
     <div class="first-page-main">
         <form action="generare.php" method="POST" autocomplete="off">
             <label for="greutate">Greutate(kg)</label>
-            <input type="number" name="greutate" value="70" min="30" max="200" required><br>
+            <input type="number" name="greutate" value="70" min="30" max="200" required><br><br>
             <label for="inaltime">Inaltime(cm)</label>
-            <input type="number" name="inaltime" value="170" min="140" max="220" required><br>
+            <input type="number" name="inaltime" value="170" min="140" max="220" required><br><br>
             <label for="grMuschi">Grupe de muschi</label>
-            <select id="grMuschi">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-            </select><br>
+            <select id="grMuschi" name="grMuschi">
+                <option value="abdomen">Abdomen</option>
+                <option value="antebrat">Antebrat</option>
+                <option value="biceps">Biceps</option>
+                <option value="coapse">Coapse</option>
+                <option value="piept">Piept</option>
+                <option value="spate">Spate</option>
+                <option value="triceps">Triceps</option>
+            </select><br><br>
             <label for="locatie">Locatia</label>
-            <select id="locatie">
+            <select id="locatie" name="locatie">
                 <option value="acasa">Acasa</option>
                 <option value="aerLiber">Aer liber</option>
                 <option value="sala">Sala</option>
-            </select><br><br>
+            </select><br><br><br>
             <button type="submit" class="submit"><span>Generare</span></button>
         </form>
 
