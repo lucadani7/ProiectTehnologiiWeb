@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +31,7 @@
         $parola = "123";
         if(isset($_POST['password']) && isset($_POST['email'])){
             if($emailBun == $_POST['email'] && $parola == $_POST['password']){
-                header('Location: first-page.html');
+                header('Location: first-page.php');
             }
             else{
                 echo '<script>window.alert("Email sau parola incorecte")</script>';

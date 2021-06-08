@@ -287,8 +287,7 @@ label{
 
 .tabel-clasament{
     border-collapse: collapse;
-    width: 50%;
-    margin-left: 10vw;
+    width: 70%;
 }
 
 .tabel-clasament td{
@@ -353,4 +352,24 @@ label{
     height: 200px;
     width: 200px;
     margin-left: 15vw;
+}
+
+/*     -------------------------------     felicitari page       ----------------------------         */
+
+.felicitari-main{
+    padding-top: 10vh;
+    margin-top: 15vh;
+    height: 75vh;
+    width: 100%;
+    background-color: #1F2833;
+}
+
+.felicitari-text{
+    font-size: 5vh;
+    color: #45A29E;
+    margin-left: 10vh;
+}
+
+.felicitari-main a{
+    text-decoration: none;
 }

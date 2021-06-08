@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,11 +29,13 @@
 
                 if($locatie == "acasa" || $locatie == "aerLiber"){
                     foreach($json_data as $element){
-                        if($element['tip'] == "acasa" || $element['tip'] == "acasa"){
+                        if($element['tip'] == "acasa"){
                             echo'<p class="nume">' . $element['nume'] . '</p>';
                             echo'<p class="descriere">' . 'Repetari: ' . $element['repetari'] . '</p>';
                             echo'<p class="descriere">' . $element['descriere'] . '</p>';
-                            echo'<img class="imagine-generata" src="' . $element['imagine'] . '" alt="Imagine...">';
+                            echo'<img class="imagine-generata" src="' . $element['imagine'] . '" alt="Imagine..."><br>';
+                            echo'<a href="felicitari.php?nume=' . $element['nume'] . '&calorii=' . 
+                                $element['calorii'] .'" class="submit">Finish</a>';
                         }
                     }
                 }
@@ -38,7 +44,9 @@
                         echo'<p class="nume">' . $element['nume'] . '</p>';
                         echo'<p class="descriere">' . 'Repetari: ' . $element['repetari'] . '</p>';
                         echo'<p class="descriere">' . $element['descriere'] . '</p>';
-                        echo'<img class="imagine-generata" src="' . $element['imagine'] . '" alt="Imagine...">';
+                        echo'<img class="imagine-generata" src="' . $element['imagine'] . '" alt="Imagine..."><br>';
+                        echo'<a href="felicitari.php?nume=' . $element['nume'] . '&calorii=' . 
+                            $element['calorii'] .'" class="submit">Finish</a>';
                     }
                 }
             }
