@@ -270,9 +270,56 @@ label{
 .first-page-main{
     margin-top: 15vh;
     background-color: #1F2833;
-    width: 100%;
+    width: 50%;
     height: 75vh;
     padding-top: 10vh;
+    display: inline-block;
+}
+
+.clasament{
+    margin-top: 15vh;
+    background-color: #1F2833;
+    width: 50%;
+    height: 75vh;
+    padding-top: 10vh;
+    float: right;
+}
+
+.tabel-clasament{
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: 10vw;
+}
+
+.tabel-clasament td{
+    padding: 8px;
+    text-align: center;
+}
+
+.tabel-clasament tr:nth-child(even){
+    background-color: white;
+}
+
+.tabel-clasament tr:hover {
+    background-color: #66FCF1;
+}
+
+.tabel-clasament tr:nth-child(odd){
+    color: #66FCF1;
+}
+
+.tabel-clasament tr:nth-child(odd):hover{
+    color: black;
+}
+
+.tabel-clasament th {
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: black;
+    color: #45A29E;
+    font-size: 3vh;
 }
 
 /*     -------------------------------     generate page       ----------------------------         */

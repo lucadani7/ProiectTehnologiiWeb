@@ -5,7 +5,8 @@
         "repetari": "12-15 pe serie",
         "calorii": "50",
         "descriere": "Aceste exercitii pentru antebrate solicita flexorii antebratelor. Din pozitia sezand, apuca haltera (sau gantera dupa caz) cu palmele in sus, avand o priza ingusta. Coatele se sprijina pe coapse si genunchi sau pe banca, astfel incat acestea sa fie imobilizate in timpul exercitiului. Se ridica si se coboara greutatea din incheieturile mainilor fara a misca antebratele.",
-        "imagine": "https://www.machomen.ro/wp-content/uploads/images/seated-palm-down-wrist-curl.jpg"
+        "imagine": "https://www.machomen.ro/wp-content/uploads/images/seated-palm-down-wrist-curl.jpg",
+        "tip": "acasa"
     },
 
     {
@@ -14,7 +15,8 @@
         "repetari": "10-12, 4-5 serii",
         "calorii": "100",
         "descriere": "Fixeaza banca la distanta optima astfel incat antebratele sa fie fixate pe coapse, iar partea din spate a incheieturilor mainilor sa fie peste genunchi. Miscarea se va face doar din incheietura mainii, fara sa misti antebratele.",
-        "imagine": "https://www.machomen.ro/wp-content/uploads/2015/04/Flexii-la-cablu-pentru-muschii-antebratului.jpg"
+        "imagine": "https://www.machomen.ro/wp-content/uploads/2015/04/Flexii-la-cablu-pentru-muschii-antebratului.jpg",
+        "tip": "sala"
     },
 
     {
@@ -23,6 +25,7 @@
         "repetari": "10/serie",
         "calorii": "20",
         "descriere": "Aseaza-tu cu fata la o distanta de cel putin un metru de la perete. Sprijina-te de perete cu palmele tale.",
-        "imagine": "http://trenda.ro/wp-content/uploads/2015/12/flotariperete.jpg"
+        "imagine": "http://trenda.ro/wp-content/uploads/2015/12/flotariperete.jpg",
+        "tip": "acasa"
     }
 ]
