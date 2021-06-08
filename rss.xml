@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<rss version="2.0">
+<channel>
+  <title>Workout Generator</title>
+  <link>http://localhost:3000/index.php</link>
+  <description>Generator de exercitii fizice</description>
+  <item>
+      <title>News of today</title>
+      <link>http://localhost:3000/index.php</link>
+      <description>Actualizare lista useri activi</description>
+  </item>
+</channel>
+</rss>

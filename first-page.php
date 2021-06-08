@@ -40,6 +40,13 @@
             </select><br><br><br>
             <button type="submit" class="submit"><span>Generare</span></button>
         </form>
+
+        <?php
+            echo '<p class="user">Nume: ' . $_SESSION['nume'] . '<br>';
+            echo 'Calorii arse: ' . $_SESSION['caloriiArse'] . '<br>';
+            echo 'Antrenamente: ' . $_SESSION['nrExercitii'] . '</p>';            
+        ?> 
+
     </div>
 
     <div class="clasament">

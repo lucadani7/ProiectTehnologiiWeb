@@ -23,6 +23,9 @@
             echo '<p class="felicitari-text">Felicitari ai terminat exercitiul ' . $_GET['nume'];
             echo  ' si ai ars ' . $_GET['calorii'] . ' calorii!';
             echo '<br> Continua tot asa!</p>';
+
+            $_SESSION['caloriiArse'] = $_SESSION['caloriiArse'] + $_GET['calorii'];
+            $_SESSION['nrExercitii'] = $_SESSION['nrExercitii'] + 1;
         ?>
 
         <a href="first-page.php" class="submit">Back</a>

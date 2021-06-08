@@ -31,6 +31,9 @@
         $parola = "123";
         if(isset($_POST['password']) && isset($_POST['email'])){
             if($emailBun == $_POST['email'] && $parola == $_POST['password']){
+                $_SESSION['nume'] = "Ion";//numele care corespunde email-ului din baza de date
+                $_SESSION['caloriiArse'] = 1000;
+                $_SESSION['nrExercitii'] = 10;
                 header('Location: first-page.php');
             }
             else{

@@ -163,6 +163,51 @@ li a:active {
     text-decoration: none;
 }
 
+.clasament-index{
+    background-color: #1F2833;
+    width: 100%;
+    height: 75vh;
+    padding-top: 10vh;
+    border-top: 1vh solid black;
+}
+
+.tabel-clasament-index{
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.tabel-clasament-index td{
+    padding: 8px;
+    text-align: center;
+}
+
+.tabel-clasament-index tr:nth-child(even){
+    background-color: white;
+}
+
+.tabel-clasament-index tr:hover {
+    background-color: #66FCF1;
+}
+
+.tabel-clasament-index tr:nth-child(odd){
+    color: #66FCF1;
+}
+
+.tabel-clasament-index tr:nth-child(odd):hover{
+    color: black;
+}
+
+.tabel-clasament-index th {
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: black;
+    color: #45A29E;
+    font-size: 3vh;
+}
+
 /*     --------------------------------      login/register    -----------------------------------       */
 
 .main-login{
@@ -319,6 +364,13 @@ label{
     background-color: black;
     color: #45A29E;
     font-size: 3vh;
+}
+
+.user{
+    color: #66FCF1;
+    font-size: 3vh;
+    margin-top: 5vh;
+    margin-left: 10vw;
 }
 
 /*     -------------------------------     generate page       ----------------------------         */
