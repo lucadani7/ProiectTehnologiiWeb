@@ -1,9 +1,5 @@
 <?php
     session_start();
-    $conn = mysqli_connect('localhost', 'gabi', '12345', 'users');
-    if(!$conn){
-        die('error: ' . mysqli_connect_error());
-    }
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +27,11 @@
 
         <?php
             if(isset($_POST['email']) && isset($_POST['password'])){
-                $sql = 'SELECT nume, prenume, email, calorii, exercitii FROM utilizatori WHERE email = "' . $_POST['email'] . '" AND parola = "' . $_POST['password'] . '"';
+                $conn = mysqli_connect('localhost', 'gabi', '12345', 'users');
+                if(!$conn){
+                    die('error: ' . mysqli_connect_error());
+                }
+                $sql = 'SELECT id, nume, prenume, email, calorii, exercitii FROM utilizatori WHERE email = "' . $_POST['email'] . '" AND parola = "' . $_POST['password'] . '"';
                 $result = mysqli_query($conn, $sql);
                 $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 mysqli_free_result($result);
@@ -40,6 +40,7 @@
                     echo '<p class="eroare">Email sau parola incorecte!</p>';
                 }
                 else{
+                    $_SESSION['id'] = $users[0]['id'];
                     $_SESSION['nume'] = $users[0]['nume'];
                     $_SESSION['prenume'] = $users[0]['prenume'];
                     $_SESSION['email'] = $users[0]['email'];

@@ -44,19 +44,48 @@
         <?php
             echo '<p class="user">' . $_SESSION['nume'] . ' ' . $_SESSION['prenume'] . ' ai urmatoarele statistici:<br>';
             echo 'Calorii arse: ' . $_SESSION['calorii'] . '<br>';
-            echo 'Antrenamente: ' . $_SESSION['exercitii'] . '</p>';
-
+            echo 'Antrenamente: ' . $_SESSION['exercitii'] . '<br>';
+            echo 'Exercitiul preferat: ';
             $conn = mysqli_connect('localhost', 'gabi', '12345', 'users');
             if(!$conn){
                 die('error: ' . mysqli_connect_error());
             }
             else{
+
+                $sql = 'SELECT exercitiu FROM antrenamente WHERE id_user = "' . $_SESSION['id'] .'" ORDER BY numar DESC LIMIT 1';
+                $result = mysqli_query($conn, $sql);
+                $exercitiuPreferat = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                mysqli_free_result($result);
+                if($exercitiuPreferat != null){
+                    echo $exercitiuPreferat[0]['exercitiu'] .'</p>';
+                }
+
                 $exercitii = mysqli_real_escape_string($conn, $_SESSION['exercitii']);
                 $calorii = mysqli_real_escape_string($conn, $_SESSION['calorii']);
                 $email = mysqli_real_escape_string($conn, $_SESSION['email']);
 
                 $sql = "UPDATE utilizatori SET calorii = '$calorii', exercitii = '$exercitii' WHERE email = '$email'";
                 if(mysqli_query($conn, $sql)){
+                    if(isset($_SESSION['nume_exercitiu'])){
+                        $sql = 'SELECT id, numar FROM antrenamente WHERE id_user = "' . $_SESSION['id'] . '" AND exercitiu = "' . $_SESSION['nume_exercitiu'] . '"';
+                        $result = mysqli_query($conn, $sql);
+                        $id_numar = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                        mysqli_free_result($result);
+                        $idUser = mysqli_real_escape_string($conn, $_SESSION['id']);
+                        $exercitiu = mysqli_real_escape_string($conn, $_SESSION['nume_exercitiu']);
+                        if($id_numar == null){
+                            //insert
+                            $sql = "INSERT INTO antrenamente(id_user, exercitiu, numar) VALUES('$idUser', '$exercitiu', '1')";
+                            mysqli_query($conn, $sql);
+                        }
+                        else
+                        {
+                            //update
+                            $numar = mysqli_real_escape_string($conn, $id_numar[0]['numar'] + 1);
+                            $sql = "UPDATE antrenamente SET numar = '$numar' WHERE id_user = '$idUser' AND exercitiu = '$exercitiu'";
+                            mysqli_query($conn, $sql);
+                        }
+                    }
                 }
                 else{
                     echo '<p class="eroare">Eroare la actualizarea bazei de date! '. mysqli_error($conn) . '</p>';

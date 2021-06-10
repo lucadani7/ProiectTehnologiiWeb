@@ -26,6 +26,7 @@
 
             $_SESSION['calorii'] = $_SESSION['calorii'] + $_GET['calorii'];
             $_SESSION['exercitii'] = $_SESSION['exercitii'] + 1;
+            $_SESSION['nume_exercitiu'] = $_GET['nume'];
         ?>
 
         <a href="first-page.php" class="submit">Back</a>
