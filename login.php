@@ -46,7 +46,7 @@
                     $_SESSION['email'] = $users[0]['email'];
                     $_SESSION['calorii'] = $users[0]['calorii'];
                     $_SESSION['exercitii'] = $users[0]['exercitii'];
-                    header('Location: first-page.php');
+                    header('Location: incalzire.php');
                 }
             }
         ?>

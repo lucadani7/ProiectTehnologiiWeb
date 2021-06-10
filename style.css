@@ -433,3 +433,60 @@ label{
 .felicitari-main a{
     text-decoration: none;
 }
+
+/*     --------------------------------      login/register    -----------------------------------       */
+
+.main-incalzire{
+    padding-top: 10vh;
+    margin-top: 15vh;
+    height: auto;
+    width: 100%;
+    padding-bottom: 10vh;
+    background-color: #1F2833;
+}
+
+.incalzire-titlu{
+    font-size: 5vh;
+    color: #66FCF1;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.incalzire-subtitlu{
+    font-size: 3vh;
+    color: #66FCF1;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.incalzire-text{
+    font-size: 3vh;
+    color: #45A29E;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.main-incalzire a{
+    font-size: 5vh;
+    margin-left: 10vw;
+    padding: 16px 20px;
+    background-image: linear-gradient(to right, #66FCF1, #1F2833);
+    border-radius: 12px;
+    color: black;
+}
+
+.main-incalzire a:link {
+    text-decoration: none;
+}
+.main-incalzire a:visited {
+    text-decoration: none;
+}
+  
+.main-incalzire a:hover {
+    text-decoration: none;
+    background-image: linear-gradient(to left, #66FCF1, #1F2833);
+}
+  
+.main-incalzire a:active {
+    text-decoration: none;
+}
