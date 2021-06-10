@@ -4,6 +4,13 @@ body {
     font-family: sans-serif;
 }
 
+.eroare{
+    font-size: 3vh;
+    color: #66FCF1;
+    margin-left: 10vw;
+    margin-top: 3vh;
+}
+
 /*       ----------------------------  main    ---------------------------------     */
 
 main {
@@ -240,6 +247,7 @@ li a:active {
     transition: all 0.5s;
     cursor: pointer;
     margin-left: 10vw;
+    text-decoration: none;
 }
 
 .submit:hover{

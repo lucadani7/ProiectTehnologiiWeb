@@ -24,8 +24,8 @@
             echo  ' si ai ars ' . $_GET['calorii'] . ' calorii!';
             echo '<br> Continua tot asa!</p>';
 
-            $_SESSION['caloriiArse'] = $_SESSION['caloriiArse'] + $_GET['calorii'];
-            $_SESSION['nrExercitii'] = $_SESSION['nrExercitii'] + 1;
+            $_SESSION['calorii'] = $_SESSION['calorii'] + $_GET['calorii'];
+            $_SESSION['exercitii'] = $_SESSION['exercitii'] + 1;
         ?>
 
         <a href="first-page.php" class="submit">Back</a>

@@ -42,9 +42,27 @@
         </form>
 
         <?php
-            echo '<p class="user">Nume: ' . $_SESSION['nume'] . '<br>';
-            echo 'Calorii arse: ' . $_SESSION['caloriiArse'] . '<br>';
-            echo 'Antrenamente: ' . $_SESSION['nrExercitii'] . '</p>';            
+            echo '<p class="user">' . $_SESSION['nume'] . ' ' . $_SESSION['prenume'] . ' ai urmatoarele statistici:<br>';
+            echo 'Calorii arse: ' . $_SESSION['calorii'] . '<br>';
+            echo 'Antrenamente: ' . $_SESSION['exercitii'] . '</p>';
+
+            $conn = mysqli_connect('localhost', 'gabi', '12345', 'users');
+            if(!$conn){
+                die('error: ' . mysqli_connect_error());
+            }
+            else{
+                $exercitii = mysqli_real_escape_string($conn, $_SESSION['exercitii']);
+                $calorii = mysqli_real_escape_string($conn, $_SESSION['calorii']);
+                $email = mysqli_real_escape_string($conn, $_SESSION['email']);
+
+                $sql = "UPDATE utilizatori SET calorii = '$calorii', exercitii = '$exercitii' WHERE email = '$email'";
+                if(mysqli_query($conn, $sql)){
+                }
+                else{
+                    echo '<p class="eroare">Eroare la actualizarea bazei de date! '. mysqli_error($conn) . '</p>';
+                    mysqli_close($conn);
+                }
+            }
         ?> 
 
     </div>
@@ -56,58 +74,19 @@
               <th>Scor</th>
               <th>Nr exercitii</th>
             </tr>
-            <tr>
-              <td>Alfreds Futterkiste</td>
-              <td>123</td>
-              <td>12</td>
-            </tr>
-            <tr>
-              <td>Berglunds snabbköp</td>
-              <td>1244</td>
-              <td>123</td>
-            </tr>
-            <tr>
-              <td>Centro Moctezuma</td>
-              <td>12414</td>
-              <td>123</td>
-            </tr>
-            <tr>
-              <td>Ernst Handel</td>
-              <td>3333</td>
-              <td>123</td>
-            </tr>
-            <tr>
-              <td>Island Trading</td>
-              <td>33333</td>
-              <td>123</td>
-            </tr>
-            <tr>
-              <td>Königlich Essen</td>
-              <td>33333</td>
-              <td>123</td>
-            </tr>
-            <tr>
-              <td>Laughing Winecellars</td>
-              <td>33333</td>
-              <td>123</td>
-            </tr>
-            <tr>
-              <td>Magazzini Riuniti</td>
-              <td>123213</td>
-              <td>123</td>
-            </tr>
-            <tr>
-              <td>North/South</td>
-              <td>12312</td>
-              <td>123</td>
-            </tr>
-            <tr>
-              <td>Paris spécialités</td>
-              <td>1212</td>
-              <td>123</td>
-            </tr>
-          </table>
-
+            <?php 
+                $sql = 'SELECT nume, prenume, calorii, exercitii FROM utilizatori ORDER BY calorii DESC LIMIT 10';
+                $result = mysqli_query($conn, $sql);
+                $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                mysqli_free_result($result);
+                mysqli_close($conn);
+                foreach($users as $user){
+                    echo '<tr><td>' . $user['nume'] . ' ' . $user['prenume'] . '</td>';
+                    echo '<td>' . $user['calorii'] . ' </td>';
+                    echo '<td>' . $user['exercitii'] . '</td></tr>';
+                }
+            ?>
+        </table>
     </div>
 
 

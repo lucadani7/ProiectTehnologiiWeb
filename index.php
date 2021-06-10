@@ -10,7 +10,7 @@
 </head>
 <body>
     <ul class="meniu">
-        <li><a href="index.html">HOME</a></li>
+        <li><a href="index.php">HOME</a></li>
         <li><a href="login.php">LOGIN</a></li>
         <li><a href="register.php">REGISTER</a></li>
     </ul>
@@ -35,63 +35,31 @@
 
 
         <div class="clasament-index">
-            <table class="tabel-clasament-index">
-                <tr>
-                  <th>Nume</th>
-                  <th>Scor</th>
-                  <th>Nr exercitii</th>
-                </tr>
-                <tr>
-                  <td>Alfreds Futterkiste</td>
-                  <td>123</td>
-                  <td>12</td>
-                </tr>
-                <tr>
-                  <td>Berglunds snabbköp</td>
-                  <td>1244</td>
-                  <td>123</td>
-                </tr>
-                <tr>
-                  <td>Centro Moctezuma</td>
-                  <td>12414</td>
-                  <td>123</td>
-                </tr>
-                <tr>
-                  <td>Ernst Handel</td>
-                  <td>3333</td>
-                  <td>123</td>
-                </tr>
-                <tr>
-                  <td>Island Trading</td>
-                  <td>33333</td>
-                  <td>123</td>
-                </tr>
-                <tr>
-                  <td>Königlich Essen</td>
-                  <td>33333</td>
-                  <td>123</td>
-                </tr>
-                <tr>
-                  <td>Laughing Winecellars</td>
-                  <td>33333</td>
-                  <td>123</td>
-                </tr>
-                <tr>
-                  <td>Magazzini Riuniti</td>
-                  <td>123213</td>
-                  <td>123</td>
-                </tr>
-                <tr>
-                  <td>North/South</td>
-                  <td>12312</td>
-                  <td>123</td>
-                </tr>
-                <tr>
-                  <td>Paris spécialités</td>
-                  <td>1212</td>
-                  <td>123</td>
-                </tr>
-              </table>
+        <table class="tabel-clasament-index">
+            <tr>
+              <th>Nume</th>
+              <th>Scor</th>
+              <th>Nr exercitii</th>
+            </tr>
+            <?php 
+                $conn = mysqli_connect('localhost', 'gabi', '12345', 'users');
+                if(!$conn){
+                    die('error: ' . mysqli_connect_error());
+                }
+                else{
+                    $sql = 'SELECT nume, prenume, calorii, exercitii FROM utilizatori ORDER BY calorii DESC LIMIT 10';
+                    $result = mysqli_query($conn, $sql);
+                    $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                    mysqli_free_result($result);
+                    mysqli_close($conn);
+                    foreach($users as $user){
+                        echo '<tr><td>' . $user['nume'] . ' ' . $user['prenume'] . '</td>';
+                        echo '<td>' . $user['calorii'] . ' </td>';
+                        echo '<td>' . $user['exercitii'] . '</td></tr>';
+                    }
+                }
+            ?>
+        </table>
 
             <a href="http://localhost:3000/rss.xml"><img src="rss.gif"></a>
         

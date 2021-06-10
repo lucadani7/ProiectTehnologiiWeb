@@ -1,5 +1,9 @@
 <?php
     session_start();
+    $conn = mysqli_connect('localhost', 'gabi', '12345', 'users');
+    if(!$conn){
+        die('error: ' . mysqli_connect_error());
+    }
 ?>
 
 <!DOCTYPE html>
@@ -24,23 +28,29 @@
             <input type="password" id="password" name="password" required><br>
             <button type="submit" class="submit"><span>Login</span></button>
         </form>
-    </div>
 
-    <?php //trebuie verificat daca exista in baza de date
-        $emailBun = "123@gmail.com";
-        $parola = "123";
-        if(isset($_POST['password']) && isset($_POST['email'])){
-            if($emailBun == $_POST['email'] && $parola == $_POST['password']){
-                $_SESSION['nume'] = "Ion";//numele care corespunde email-ului din baza de date
-                $_SESSION['caloriiArse'] = 1000;
-                $_SESSION['nrExercitii'] = 10;
-                header('Location: first-page.php');
+        <?php
+            if(isset($_POST['email']) && isset($_POST['password'])){
+                $sql = 'SELECT nume, prenume, email, calorii, exercitii FROM utilizatori WHERE email = "' . $_POST['email'] . '" AND parola = "' . $_POST['password'] . '"';
+                $result = mysqli_query($conn, $sql);
+                $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                mysqli_free_result($result);
+                mysqli_close($conn);
+                if($users == null){
+                    echo '<p class="eroare">Email sau parola incorecte!</p>';
+                }
+                else{
+                    $_SESSION['nume'] = $users[0]['nume'];
+                    $_SESSION['prenume'] = $users[0]['prenume'];
+                    $_SESSION['email'] = $users[0]['email'];
+                    $_SESSION['calorii'] = $users[0]['calorii'];
+                    $_SESSION['exercitii'] = $users[0]['exercitii'];
+                    header('Location: first-page.php');
+                }
             }
-            else{
-                echo '<script>window.alert("Email sau parola incorecte")</script>';
-            }
-        }
-    ?>
+        ?>
+
+    </div>
 
 </body>
 </html>
