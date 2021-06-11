@@ -41,7 +41,7 @@
             <button type="submit" class="submit"><span>Generare</span></button>
         </form>
 
-        <?php
+        <?php //statistici
             echo '<p class="user">' . $_SESSION['nume'] . ' ' . $_SESSION['prenume'] . ' ai urmatoarele statistici:<br>';
             echo 'Calorii arse: ' . $_SESSION['calorii'] . '<br>';
             echo 'Antrenamente: ' . $_SESSION['exercitii'] . '<br>';
@@ -74,13 +74,13 @@
                         $idUser = mysqli_real_escape_string($conn, $_SESSION['id']);
                         $exercitiu = mysqli_real_escape_string($conn, $_SESSION['nume_exercitiu']);
                         if($id_numar == null){
-                            //insert
+                            //insert exercitiu nou
                             $sql = "INSERT INTO antrenamente(id_user, exercitiu, numar) VALUES('$idUser', '$exercitiu', '1')";
                             mysqli_query($conn, $sql);
                         }
                         else
                         {
-                            //update
+                            //update exercitiu existent
                             $numar = mysqli_real_escape_string($conn, $id_numar[0]['numar'] + 1);
                             $sql = "UPDATE antrenamente SET numar = '$numar' WHERE id_user = '$idUser' AND exercitiu = '$exercitiu'";
                             mysqli_query($conn, $sql);
@@ -103,7 +103,9 @@
               <th>Scor</th>
               <th>Nr exercitii</th>
             </tr>
-            <?php 
+            <?php
+                $index = 0;
+            //$data = array('0'=> array('nume'=>'mirciu', 'ani'=>70), '1'=>array('nume'=>'asd', 'ani'=>10));
                 $sql = 'SELECT nume, prenume, calorii, exercitii FROM utilizatori ORDER BY calorii DESC LIMIT 10';
                 $result = mysqli_query($conn, $sql);
                 $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -113,7 +115,12 @@
                     echo '<tr><td>' . $user['nume'] . ' ' . $user['prenume'] . '</td>';
                     echo '<td>' . $user['calorii'] . ' </td>';
                     echo '<td>' . $user['exercitii'] . '</td></tr>';
+                    $data = array('nume'=> $user['nume'] . $user['prenume'], 'calorii' => $user['calorii'], 'exercitii'=> $user['exercitii']);
+                    $json[$index] = $data;
+                    $index = $index + 1;  
                 }
+                $arr = json_encode($json);
+                file_put_contents("clasament.json", $arr);
             ?>
         </table>
     </div>
