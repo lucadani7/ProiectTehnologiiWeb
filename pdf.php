@@ -3,14 +3,19 @@
     class MYPDF extends TCPDF {
 
         // Load table data from file
-        public function LoadData($file) {
+        public function LoadData() {
             // Read file lines
-            $lines = file($file);
-            $data = array();
-            foreach($lines as $line) {
-                $data[] = explode(';', chop($line));
+            $conn = mysqli_connect('localhost', 'gabi', '12345', 'users');
+            if(!$conn){
+                die('error: ' . mysqli_connect_error());
             }
-            return $data;
+
+            $sql = 'SELECT nume, prenume, calorii, exercitii FROM utilizatori ORDER BY calorii DESC LIMIT 10';    
+            $result = mysqli_query($conn, $sql);
+            $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            mysqli_free_result($result);
+            mysqli_close($conn);
+            return $users;
         }
 
         // Colored table
@@ -35,9 +40,9 @@
             // Data
             $fill = 0;
             foreach($data as $row) {
-                $this->Cell($w[0], 6, $row[0], 'LR', 0, 'C', $fill);
-                $this->Cell($w[1], 6, number_format($row[1]), 'LR', 0, 'C', $fill);
-                $this->Cell($w[2], 6, number_format($row[2]), 'LR', 0, 'C', $fill);
+                $this->Cell($w[0], 6, $row['nume'] . $row['prenume'], 'LR', 0, 'C', $fill);
+                $this->Cell($w[1], 6, number_format($row['calorii']), 'LR', 0, 'C', $fill);
+                $this->Cell($w[2], 6, number_format($row['exercitii']), 'LR', 0, 'C', $fill);
                 $this->Ln();
                 $fill=!$fill;
             }
@@ -87,10 +92,10 @@
     $pdf->AddPage();
 
     // column titles
-    $header = array('Nume', 'Calorii', 'Exercitii');
+    $header = array('Nume', 'Scor', 'Nr exercitii');
 
     // data loading
-    $data = $pdf->LoadData('date.txt');
+    $data = $pdf->LoadData();
 
     // print colored table
     $pdf->ColoredTable($header, $data);

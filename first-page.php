@@ -105,7 +105,6 @@
             </tr>
             <?php
                 $index = 0;
-            //$data = array('0'=> array('nume'=>'mirciu', 'ani'=>70), '1'=>array('nume'=>'asd', 'ani'=>10));
                 $sql = 'SELECT nume, prenume, calorii, exercitii FROM utilizatori ORDER BY calorii DESC LIMIT 10';
                 $result = mysqli_query($conn, $sql);
                 $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -117,7 +116,7 @@
                     echo '<td>' . $user['exercitii'] . '</td></tr>';
                     $data = array('nume'=> $user['nume'] . $user['prenume'], 'calorii' => $user['calorii'], 'exercitii'=> $user['exercitii']);
                     $json[$index] = $data;
-                    $index = $index + 1;  
+                    $index = $index + 1;
                 }
                 $arr = json_encode($json);
                 file_put_contents("clasament.json", $arr);
