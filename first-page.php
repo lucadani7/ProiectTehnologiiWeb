@@ -121,6 +121,7 @@
                 }
                 $arr = json_encode($json);
                 file_put_contents("clasament.json", $arr);
+                echo '<a href="pdf.php">pdf</a>';
             ?>
         </table>
     </div>
