@@ -60,8 +60,9 @@
                 }
             ?>
         </table>
-
-            <a href="http://localhost:3000/rss.xml"><img src="rss.gif"></a>
+            <a href="http://localhost:3000/rss.xml" class="pdf-json-rss-buton">RSS</a>
+            <a href="pdf.php" class="pdf-json-rss-buton">PDF</a>
+            <a href="json.php" class="pdf-json-rss-buton">JSON</a>
         
         </div>
 

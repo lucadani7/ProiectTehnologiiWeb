@@ -114,7 +114,7 @@
                     echo '<tr><td>' . $user['nume'] . ' ' . $user['prenume'] . '</td>';
                     echo '<td>' . $user['calorii'] . ' </td>';
                     echo '<td>' . $user['exercitii'] . '</td></tr>';
-                    $data = array('nume'=> $user['nume'] . $user['prenume'], 'calorii' => $user['calorii'], 'exercitii'=> $user['exercitii']);
+                    $data = array('nume'=> $user['nume'] . ' ' . $user['prenume'], 'calorii' => $user['calorii'], 'exercitii'=> $user['exercitii']);
                     $json[$index] = $data;
                     $index = $index + 1;
                 }
@@ -122,7 +122,8 @@
                 file_put_contents("clasament.json", $arr);
             ?>
         </table>
-        <a href="pdf.php" class="submit"><span>PDF</span></a>
+        <a href="pdf.php" class="pdf-json-buton">PDF</a>
+        <a href="json.php" class="pdf-json-buton">JSON</a>
     </div>
 
 
