@@ -92,7 +92,7 @@
                     mysqli_close($conn);
                 }
             }
-        ?> 
+        ?>
 
     </div>
 
@@ -126,6 +126,7 @@
         <a href="json.php" class="pdf-json-buton">JSON</a>
     </div>
 
+    <footer><a href="Calculator.php">Calculeaza-ti caloriile din alimente</a></footer>
 
 </body>
 </html>

@@ -34,6 +34,16 @@ footer p{
     font-size: 10vh;
     margin: 0;
 }
+footer a{
+    padding: 8px 12px;
+    background-image: linear-gradient(to right, #66FCF1, #1F2833);
+    font-size: 3vh;
+    border-radius: 20px;
+    color: black;
+    border-color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 /*       ----------------------------  header    ---------------------------------     */
 
@@ -526,4 +536,33 @@ label{
     color: black;
     text-decoration: none;
     margin-left: 1vw;
+}
+
+/*     --------------------------------  calculator page    -----------------------------------       */
+
+#mainCalculator{
+    padding-top: 10vh;
+    margin-top: 15vh;
+    min-height: 75vh;
+    max-height: 300vh;
+    width: 100%;
+    background-color: #1F2833;
+}
+
+#mainCalculator p {
+    font-size: 3vh;
+    color: #66FCF1;
+    margin-left: 10vw;
+}
+
+#mainCalculator button{
+    padding: 8px 12px;
+    background-image: linear-gradient(to right, #66FCF1, #1F2833);
+    font-size: 3vh;
+    border-radius: 20px;
+    color: black;
+    border-color: black;
+    text-decoration: none;
+    margin-left: 10vw;
+    cursor: pointer;
 }
