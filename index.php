@@ -58,6 +58,27 @@
                         echo '<td>' . $user['exercitii'] . '</td></tr>';
                     }
                 }
+                //rss
+
+                $web_url = "http://" . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
+                $str = "<?xml version='1.0' ?>";
+                $str .= "<rss version='2.0'>";
+                $str .= "<channel>";
+                $str .= "<title>Workout Generator</title>";
+                $str .= "<description>Top 10 utilizatori</description>";
+                $str .= "<language>en-US</language>";
+                $str .= "<link>$web_url</link>";
+ 
+                foreach($users as $user){
+                    $str .= "<item>";
+                        $str .= "<title>" . $user['nume'] . " " . $user['prenume'] . "</title>";
+                        $str .= "<description>Calorii arse: " . $user['calorii'] . ", exercitii terminate: " . $user['exercitii'] . "</description>";
+                    $str .= "</item>";
+                }
+ 
+                $str .= "</channel>";
+                $str .= "</rss>"; 
+                file_put_contents("rss.xml", $str);
             ?>
         </table>
             <a href="http://localhost:3000/rss.xml" class="pdf-json-rss-buton">RSS</a>
