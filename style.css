@@ -566,3 +566,52 @@ label{
     margin-left: 10vw;
     cursor: pointer;
 }
+
+/*     --------------------------------  raport/user guide    -----------------------------------       */
+
+.raport{
+    padding-top: 10vh;
+    margin-top: 15vh;
+    height: auto;
+    width: 100%;
+    background-color: #424242;
+}
+
+.capitol{
+    color: #66FCF1;
+    margin-left: 15vw;
+    margin-right: 10vw;
+    font-size: 4vh;
+}
+
+.desc{
+    color: #45A29E;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    font-size: 3vh;
+}
+
+.raport-image{
+    margin-left: 10vw;
+    width: 80vw;
+    height: auto;
+}
+
+.raport a{
+    color: #45A29E;
+}
+
+.raport a:link {
+    text-decoration: none;
+}
+.raport a:visited {
+    text-decoration: none;
+}
+  
+.raport a:hover {
+    text-decoration: none;
+}
+  
+.raport a:active {
+    text-decoration: none;
+}

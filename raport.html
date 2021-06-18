@@ -9,37 +9,93 @@
 </head>
 <body>
     <header>
-        <h1>Workout Generator</h1>
+        <p>Workout Generator</p>
     </header>
 
-    <main>
+    <div class="raport">
 
-        <h1 class="ex-loc">Descriere</h1>
-        <p class="desc">Aplicatie Web ce le ofera utilizatorilor diverse tipuri de antrenamente 
-            sportive personalizate in functie de greutate, inaltime, varsta si gen.
+        <p class="capitol">Scop</p>
+        <p class="desc">Scopul acestui document este de a oferi o descriere detaliata a aplicatie web Workout 
+            Generator. Acest document va explica caracteristicile, functionalitatile si scopul aplicatiei.
         </p><br><br>
 
-        <h1 class="ex-loc">Functiile aplicatiei</h1>
-        <p class="desc">
-            	Creare cont, antrenamente personalizate in functie de: grupele de muschi, durata, locatie(
-                    acasa, aer liber, sala), instructiuni detaliate ale exercitiilor( descriere, imagini,
-                    video), statistici pentru fiecare utilizator clasament al celor mai activi utilizatori.
+        <p class="capitol">Publicul vizat si sugestii de lectura</p>
+        <p class="desc">Audienta acestui document poate fi formata din alti dezvoltatori care ar putea fi 
+            interesati sa contribuie la aceasta aplicatie sau sa isi bazeze munca pe aceasta. De asemenea, 
+            poate fi util si pentru utilizatorii aplicatiei.
         </p><br><br>
         
-        <h1 class="ex-loc">Mediul de operare</h1>
-        <p class="desc">Aplicatia este disponibila exclusive online si este compatibila cu orice browser.
+        <p class="capitol">Scopul aplicatiei<p>
+        <p class="desc">Workout Generator este un site web care permite utilizatorilor sa se informeze corect 
+            cu privire la incalzirea inainte de exercitiile fizice pe care urmeaza sa le faca, sa urmeze descrierea 
+            ampla a exercitiilor fizice pentru a se antrena corect fara riscul de a se accidenta, sa isi aleaga 
+            tipul de exercitii in functie de grupa de muschi sau locatie si sa isi calculeze caloriile alimentelor. 
+            Aceasta aplicatie dispune de un clasament public a celor mai activi utilizatori pentru a-i motiva si 
+            pe ceilalti, in plus, clasamentul este in diferite formate pentru a putea fi exportat usor.
         </p><br><br>
 
-        <h1 class="ex-loc">Ghid de utilizare</h1>
-        <p class="desc">
-            Prima pagina ofera persoanelor posibiliatea de a-si crea cont sau, in cazul de au deja cont, 
-            de a intra in aplicatie folosind datele pe care le-au introdus la crearea contului. Dupa 
-            logare putem sa ne alegem locatia unde vom desfasura activitatea fizica sau diferitele 
-            tipuri de muschi pe care vrem sa le antrenam. Exercitiile vin impreuna cu imagini si o 
-            descriere usor de inteles astfel incat sa ne antrenam corect fara riscul de a ne accidenta.
+        <p class="capitol">Functionalitatile aplicatiei si implementare</p>
+        <p class="desc">Aceasta aplicatie este creata utilizand PHP, HTML si CSS. Datele sunt stocate intr-o 
+            baza de date MariaDB.</p>
+        <p class="desc">Pagina principala: contine meniul principal si clasamentul in diferite formate: rss, json 
+            si pdf. Pentru formatul pdf s-a folosit libraria TCPDF (<a href="https://tcpdf.org/">https://tcpdf.org/</a>). 
+            Pentru crearea clasamentului, datele sunt extrase din baza de date.
+        </p>
+        <img src="imagini raport/home.png" class="raport-image">
+        <br><br><br>
+
+        <p class="desc">Login: utilizatorii se logheaza cu mail-ul si parola. Se verifica daca mail-ul si parola respectiva 
+            corespund aceluiasi cont in baza de date.
+        </p>
+        <img src="imagini raport/login.png" class="raport-image">
+        <br><br><br>
+
+        <p class="desc">Register: oricine doreste sa foloseasca aplicatia poate sa isi creeze un cont. Crearea contului 
+            se realizeaza in urma completarii corecte unui formular si verificarii ca acel mail nu corespunde deja unui 
+            cont in baza de date.
+        </p>
+        <img src="imagini raport/register.png" class="raport-image">
+        <br><br><br>
+
+        <p class="desc">Pagina de incalzire: contine informatii foarte utile cu privire la modul in care trebuie sa 
+            ne incalzim inainte de antrenamente si importanta incalzirii fara de care am risca sa ne accidentam. 
+        </p>
+        <img src="imagini raport/incalzire.png" class="raport-image">
+        <br><br><br>
+
+        <p class="desc">Prima pagina: ofera utilizatorilor statistici cu privire la antrenamentele lor, clasamentul 
+            general si formularul pentru a genera exercitii fizice in functie de anumite criterii. Statisticile sunt 
+            luate din baza de date.
+        </p>
+        <img src="imagini raport/first-page.png" class="raport-image">
+        <br><br><br>
+
+        <p class="desc">Pagina cu exercitii generate: exercitiile au o descriere ampla a modului in care ar 
+            trebui facute si sunt insotite de o imagine. Exercitiile sunt generate in functie de preferintele 
+            utilizatorului: grupa de muschi, locatia(sala, acasa, in aer liber). Fiecare exercitiu se poate finaliza 
+            prin apasarea butonului "Finish" care il trimite pe utilizator pe o pagina separata in care ii 
+            specifica numar de calorii arse.
+        </p>
+        <img src="imagini raport/generare.png" class="raport-image">
+        <br><br><br>
+
+        <p class="desc">Calculatorul caloriilor: aplicatia dispune de un calculator al caloriilor alimentelor. 
+            Calculatorul functioneaza pe baza raspunsului oferit de apelul la API-ul public EDAMAM 
+            (<a href="https://developer.edamam.com/">https://developer.edamam.com/</a>).
+        </p>
+        <img src="imagini raport/calculator.png" class="raport-image">
+        <br><br><br>
+
+        <p class="capitol">Clase de utilizatori si caracteristici</p>
+        <p class="desc">Utilizatorii nelogati pot avea acces doar la tabelul cu cei mai activi useri. 
+            Utilizatorii logati beneficieaza de restul functionalitatilor.
         </p><br><br>
 
-    </main>
+        <p class="capitol">Mediul de operare</p>
+        <p class="desc">Acest site poate si gazduit de orice tip de sistem de operare care poate rula PHP.
+        </p><br><br>
+
+    </div>
 
 </body>
 </html>
