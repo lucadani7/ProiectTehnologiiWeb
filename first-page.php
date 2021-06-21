@@ -66,7 +66,7 @@
 
                 $sql = "UPDATE utilizatori SET calorii = '$calorii', exercitii = '$exercitii' WHERE email = '$email'";
                 if(mysqli_query($conn, $sql)){
-                    if(isset($_SESSION['nume_exercitiu'])){
+                    if(isset($_SESSION['nume_exercitiu']) || $_SESSION['nume_exercitiu'] != null){
                         $sql = 'SELECT id, numar FROM antrenamente WHERE id_user = "' . $_SESSION['id'] . '" AND exercitiu = "' . $_SESSION['nume_exercitiu'] . '"';
                         $result = mysqli_query($conn, $sql);
                         $id_numar = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -86,6 +86,7 @@
                             mysqli_query($conn, $sql);
                         }
                     }
+                    $_SESSION['nume_exercitiu'] = null;
                 }
                 else{
                     echo '<p class="eroare">Eroare la actualizarea bazei de date! '. mysqli_error($conn) . '</p>';
